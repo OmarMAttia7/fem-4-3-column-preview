@@ -126,6 +126,7 @@ body {
     .component__description {
         height: 25vh;
         margin-bottom: 0;
+        line-height: 1.6rem;
     }
 
     .component__column:first-child {
