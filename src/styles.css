@@ -27,6 +27,7 @@ body {
     align-items: center;
     min-height: 100vh;
     color: var(--light-gray);
+    background-color: var(--light-gray);
 }
 
 /*Component*/
@@ -71,7 +72,7 @@ body {
 
 /*Component Headings*/
 .component__heading {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Big Shoulders Display', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     margin: 1.25rem 0;
@@ -89,7 +90,7 @@ body {
     background-color: var(--light-gray);
     text-decoration: none;
     font-size: 1rem;
-    padding: 1rem 2rem;
+    padding: 0.625rem 2rem;
     border: 3px solid var(--light-gray);
     border-radius: 35px;
     display: inline-block;
