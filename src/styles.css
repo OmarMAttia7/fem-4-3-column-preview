@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*Variables*/
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+/*General Styling*/
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--light-gray);
+}
+
+/*Component*/
+.component {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 2rem;
+}
+
+/*Component Columns*/
+.component__column {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.component__column--orange {
+    background-color: var(--orange);
+}
+
+.component__column--cyan {
+    background-color: var(--cyan);
+}
+
+.component__column--dark-cyan {
+    background-color: var(--dark-cyan);
+}
+
+.component__column:first-child {
+    border-radius: 15px 15px 0 0;
+}
+
+.component__column:last-child {
+    border-radius: 0 0 15px 15px;
+}
+
+/*Component Icons*/
+.component__icon {
+    width: 64px;
+}
+
+/*Component Headings*/
+.component__heading {
+    font-size: 2rem;
+    font-family: 'Big Shoulders Display', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin: 1.25rem 0;
+}
+
+/*Component Descriptions*/
+.component__description {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+/*Component Buttons*/
+.component__button {
+    background-color: var(--light-gray);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: 3px solid var(--light-gray);
+    border-radius: 35px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.component__button--orange {
+    color: var(--orange);
+}
+
+.component__button--cyan {
+    color: var(--cyan);
+}
+
+.component__button--dark-cyan {
+    color: var(--dark-cyan);
+}
+
+.component__button:hover {
+    background-color: transparent;
+    color: var(--light-gray);
+    border-color: var(--light-gray);
+}
+
+/*Desktop Styling*/
+
+@media (min-width: 800px) {
+    .component {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: none;
+        width: 80%;
+    }
+
+    .component__description {
+        height: 25vh;
+        margin-bottom: 0;
+    }
+
+    .component__column:first-child {
+        border-radius: 15px 0 0 15px;
+    }
+
+    .component__column:last-child {
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .component {
+        width: 60%;
+    }
+}
+
+/*Footer*/
+.attribution {
+    font-size: 11px; text-align: center;
+    color: var(--cyan);
+}
+
+.attribution a {
+    color: var(--dark-cyan)
+}
